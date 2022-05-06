@@ -1,2 +1,2 @@
-# JavaScript-Project-1
-Hello To My First Project  :))
+# Geuss My Number 
+Guess my Number first javascript work .
