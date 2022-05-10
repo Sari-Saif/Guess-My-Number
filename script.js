@@ -1,20 +1,17 @@
 'use strict';
 
-/*
-console.log(document.querySelector('.message').textContent);
-document.querySelector('.message').textContent = 
-'Correct Number !';
-document.querySelector('.number').textContent = 0
-document.querySelector('.score').textContent = 0
-document.querySelector('.guess').value = 23
-*/
  // set random between 1 and 20 .
- const secretNumber = Math.trunc(Math.random()*20) + 1;
+ let secretNumber = Math.trunc(Math.random()*20) + 1;
  // to  get the secret number and load it to  html  element 
  document.querySelector('.number').textContent = 
  secretNumber ;
-  
+ let secretNum = secretNumber;
  let score = 20 
+ function RES(secretNumber)
+ {
+  secretNumber = Math.trunc(Math.random()*20) + 1;
+  return secretNumber;
+}
 
  // to program logices of click button ('Check')
  document.querySelector('.check').addEventListener
@@ -64,3 +61,23 @@ document.querySelector('.guess').value = 23
 
   }
   });
+
+  document.querySelector('.again').addEventListener
+  ('click',  function()
+  {
+    score = 20
+    secretNumber = Math.trunc(Math.random()*20) + 1;
+    
+    document.querySelector('.message').textContent = 
+    ' Geuss It Again !';
+      
+    document.querySelector('.score').textContent = score;
+    
+    document.querySelector('.number').textContent = ' ? ';
+    document.querySelector('.geuss').textContent = '';
+   
+   document.querySelector('.body').style.backgroundColor ='#222';
+   document.querySelector('.number').style.width ='15rem';
+
+}    
+  );
